@@ -1,4 +1,4 @@
-"""lecture6 URL Configuration
+"""singlepage URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -18,6 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('singlepage/', include("singlepage.urls")),
-    path('', include("singlepage.urls")),
+    path('singlepage1/', include('singlepage1.urls')),
+    path('singlepage2/', include('singlepage2.urls')),
 ]
