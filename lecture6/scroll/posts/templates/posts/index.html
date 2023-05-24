@@ -1,5 +1,4 @@
-<h1>Hello world</h1>
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <title>My Webpage</title>
@@ -8,10 +7,8 @@
         <script>
             // Start with first post
             let counter = 1;
-
             // Load posts 20 at a time
             const quantity = 20;
-
             // When DOM loads, render the first 20 posts
             document.addEventListener('DOMContentLoaded', load);
             
@@ -21,9 +18,8 @@
                 const start = counter;
                 const end = start + quantity - 1;
                 counter = end + 1;
-
                 // Get new posts and add posts
-                fetch(`/posts?start=${start}&end=${end}`)
+                fetch(`posts?start=${start}&end=${end}`) //since "/" used in urls.py, no need to use here
                 .then(response => response.json())
                 .then(data => {
                     data.posts.forEach(add_post);
@@ -36,7 +32,6 @@
                 const post = document.createElement('div');
                 post.className = 'post';
                 post.innerHTML = contents;
-
                 // Add post to DOM
                 document.querySelector('#posts').append(post);
             };
@@ -46,4 +41,4 @@
         <div id="posts">
         </div>
     </body>
-</html> -->
+</html>
